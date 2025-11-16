@@ -4,12 +4,13 @@ using UnityEngine.InputSystem;
 public class PlayerCam : MonoBehaviour
 {
     InputAction moveCamera;
+   
 
     public float MIN_CAMERA_ANGLE;
     public float MAX_CAMERA_ANGLE;
 
     public float sensitivity;
-
+    
     public Transform orientation;
 
     float xRotation;
@@ -17,6 +18,14 @@ public class PlayerCam : MonoBehaviour
 
     private void Start()
     {
+        if (!orientation)
+        {
+            Debug.LogError("Orientation not set");
+        }
+        if (sensitivity == 0)
+        {
+            Debug.LogError("Sensitivity not set or 0");
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
