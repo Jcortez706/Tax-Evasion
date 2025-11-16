@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    InputAction moveCamera;
+
+    public float MIN_CAMERA_ANGLE;
+    public float MAX_CAMERA_ANGLE;
+
+    public float sensitivity;
 
     public Transform orientation;
 
@@ -15,26 +20,22 @@ public class PlayerCam : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        moveCamera = InputSystem.actions.FindAction("Look");
+
     }
 
 
     private void Update()
     {
-        // Get the mouse input
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        Vector2 lookValue = moveCamera.ReadValue<Vector2>() * Time.deltaTime * sensitivity;
 
-
-        yRotation += mouseX;
-
-        xRotation -= mouseY;
+        yRotation += lookValue.x;
+        xRotation -= lookValue.y;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
-
-
 
     }
 }
