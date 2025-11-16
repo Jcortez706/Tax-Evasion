@@ -708,8 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MIN_CAMERA_ANGLE: -90
   MAX_CAMERA_ANGLE: 90
-  sensX: 200
-  sensY: 200
+  sensitivity: 50
   orientation: {fileID: 400103675}
 --- !u!114 &958202055
 MonoBehaviour:

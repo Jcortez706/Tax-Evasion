@@ -22,7 +22,7 @@ public class PlayerCam : MonoBehaviour
         {
             Debug.LogError("Orientation not set");
         }
-        if (sensitivity == 0)
+        if (Mathf.Abs(sensitivity) < 1e-5f)
         {
             Debug.LogError("Sensitivity not set or 0");
         }
@@ -34,13 +34,13 @@ public class PlayerCam : MonoBehaviour
     }
 
 
-    private void Update()
+    private void LateUpdate()
     {
         Vector2 lookValue = moveCamera.ReadValue<Vector2>() * Time.deltaTime * sensitivity;
 
         yRotation += lookValue.x;
         xRotation -= lookValue.y;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, MIN_CAMERA_ANGLE, MAX_CAMERA_ANGLE);
 
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
