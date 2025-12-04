@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d749d03a4dcc547bad0eddd816d76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveCamera
-  cameraPosition: {fileID: 1612630697}
+  cameraPosition: {fileID: 1201707718}
 --- !u!136 &1199765388
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -753,6 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3034d1457f80c4aa01467f9e61d271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  cameraTransform: {fileID: 1201707718}
 --- !u!143 &1792144863
 CharacterController:
   m_ObjectHideFlags: 0
