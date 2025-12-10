@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class GrabMechanic : MonoBehaviour
 {
     [Header("Settings")]
-    public Transform cameraTransform; // Assign your Main Camera here
-    public float distance = 3.0f;     // How far away the object hovers
-    InputAction interactWithObject;
+    public Transform cameraTransform;
+    public float distance = 3.0f;
+
 
     void LateUpdate()
     {
@@ -15,9 +15,5 @@ public class GrabMechanic : MonoBehaviour
         transform.position = cameraTransform.position + (cameraTransform.forward * distance);
 
         transform.rotation = cameraTransform.rotation;
-
-        
-
-
     }
 }
