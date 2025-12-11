@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor;
 
 public class Timer : MonoBehaviour
 {
@@ -22,7 +23,15 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            Application.Quit();
+            DoQuitGame();
         }
+    }
+    public void DoQuitGame()
+    {
+        Debug.Log("Quitting game...");
+        if (UnityEditor.EditorApplication.isPlaying == true) EditorApplication.isPlaying = false;
+        
+        else
+            Application.Quit();
     }
 }
