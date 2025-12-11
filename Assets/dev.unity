@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: 1199765389}
   - component: {fileID: 1199765388}
   - component: {fileID: 1199765386}
+  - component: {fileID: 1199765387}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -913,11 +914,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1760009311 stripped
+--- !u!1 &1760009311
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5570760939477884657, guid: 7c525024ae8431e45b357520bb8407a6, type: 3}
-  m_PrefabInstance: {fileID: 1954752821}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760009315}
+  - component: {fileID: 1760009313}
+  - component: {fileID: 1760009314}
+  m_Layer: 0
+  m_Name: 
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!54 &1760009313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -957,6 +971,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811606afd5571094c9ff67ae4338b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectGrabbable
+--- !u!4 &1760009315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760009311}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792144860
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +997,7 @@ GameObject:
   - component: {fileID: 1792144861}
   - component: {fileID: 1792144862}
   - component: {fileID: 1792144863}
+  - component: {fileID: 1792144864}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1031,6 +1061,24 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1792144864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792144860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e663a2dca102e4fa80b4dfd40ac188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickUpDrop
+  cameraTransform: {fileID: 1201707718}
+  pickupLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  objectGrabPointTransform: {fileID: 494194758}
+  distance: 3
 --- !u!1 &2089560484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,9 +1254,9 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1760009315}
   - {fileID: 2089560487}
   - {fileID: 1792144861}
   - {fileID: 1125495741}
   - {fileID: 1742455390}
   - {fileID: 954001145}
-  - {fileID: 1954752821}
