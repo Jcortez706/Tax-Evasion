@@ -1,15 +1,14 @@
 using UnityEngine;
 
 public class ShredderScript : MonoBehaviour
-{
-    private GameObject shredder;
-    [SerializeField] private LayerMask pickupLayerMask;
+{ 
+    [SerializeField] public string shreddableObjectTag;
     private bool isHolding = false;
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision);
-        if(collision.gameObject.CompareTag("Shreddable"))
+        if(collision.gameObject.CompareTag(shreddableObjectTag))
         {
             isHolding = true;
             
@@ -17,7 +16,7 @@ public class ShredderScript : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Shreddable"))
+        if(collision.gameObject.CompareTag(shreddableObjectTag))
         {
             isHolding = false;
 
@@ -26,7 +25,7 @@ public class ShredderScript : MonoBehaviour
 
     public void destroyHeldObject(GameObject document)
     {
-        if (document.CompareTag("Shreddable"))
+        if (document.CompareTag(shreddableObjectTag))
         {
             Destroy(document);
         }

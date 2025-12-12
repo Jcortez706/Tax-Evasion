@@ -55,15 +55,15 @@ public class PlayerPickUpDrop : MonoBehaviour
 
 
                     objectToDelete = raycastHit.transform.gameObject;
-                    Debug.Log(objectToDelete);
+                    
                     this.objectGrabbable = objectGrabbable;
                     objectGrabbable.Grab(objectGrabPointTransform);
-                    Debug.Log(objectGrabbable);
+                    
                 } else if (
                     raycastHit.transform.TryGetComponent(out ShredderScript shredder)
                     )
                 {
-                    Debug.Log(objectToDelete);
+                    
                     if (objectToDelete)
                     {
                         shredder.destroyHeldObject(objectToDelete);
