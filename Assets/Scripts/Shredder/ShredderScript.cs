@@ -3,14 +3,14 @@ using UnityEngine;
 public class ShredderScript : MonoBehaviour
 { 
     [SerializeField] public string shreddableObjectTag;
-    private bool isHolding = false;
+    private GameObject objectHeld;
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision);
         if(collision.gameObject.CompareTag(shreddableObjectTag))
         {
-            isHolding = true;
+            objectHeld = collision.gameObject;
             
         }
     }
@@ -18,14 +18,14 @@ public class ShredderScript : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(shreddableObjectTag))
         {
-            isHolding = false;
+            objectHeld = null;
 
         }
     }
 
     public void destroyHeldObject(GameObject document)
     {
-        if (document.CompareTag(shreddableObjectTag))
+        if (document.CompareTag(shreddableObjectTag) && document == objectHeld)
         {
             Destroy(document);
         }
