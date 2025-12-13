@@ -181,6 +181,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8309484899145214124, guid: 95b0275a1e2bbdf4782d380f63dfb782, type: 3}
   m_PrefabInstance: {fileID: 156260013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &418332924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418332925}
+  m_Layer: 6
+  m_Name: document holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418332925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418332924}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.063, y: 3.016, z: -0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 563719248}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &426825428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,9 +300,40 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1372991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5454941
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 418332925}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
       insertIndex: -1
@@ -427,6 +489,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShredderScript
   shreddableObjectTag: Shreddable
+  documentHolder: {fileID: 418332924}
+--- !u!4 &563719248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
+  m_PrefabInstance: {fileID: 426825428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &563719249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -446,8 +514,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7, y: 1.91, z: 1.4}
-  m_Center: {x: 0, y: 1.1, z: -0.37}
+  m_Size: {x: 1.7, y: 2.3692436, z: 1.3999999}
+  m_Center: {x: -0, y: 1.3296218, z: -0.37}
 --- !u!54 &563719250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -470,10 +538,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &634164777
 GameObject:
