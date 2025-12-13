@@ -8,10 +8,13 @@ public class PlayerPickUpDrop : MonoBehaviour
     PlayerControls playerControls;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private LayerMask pickupLayerMask;
+    [SerializeField] private LayerMask shreddableLayerMask;
     [SerializeField] private Transform objectGrabPointTransform;
     public float distance = 3.0f;
 
     private ObjectGrabbable objectGrabbable;
+    [SerializeField] private GameObject shredder;
+    private GameObject objectToDelete;
 
 
 
@@ -49,9 +52,22 @@ public class PlayerPickUpDrop : MonoBehaviour
             {
                 if (raycastHit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable))
                 {
+
+
+                    objectToDelete = raycastHit.transform.gameObject;
+                    
                     this.objectGrabbable = objectGrabbable;
                     objectGrabbable.Grab(objectGrabPointTransform);
-                    Debug.Log(objectGrabbable);
+                    
+                } else if (
+                    raycastHit.transform.TryGetComponent(out ShredderScript shredder)
+                    )
+                {
+                    
+                    if (objectToDelete)
+                    {
+                        shredder.destroyHeldObject(objectToDelete);
+                    }
                 }
             }
         }else
