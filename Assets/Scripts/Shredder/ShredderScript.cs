@@ -1,10 +1,17 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ShredderScript : MonoBehaviour
 { 
     [SerializeField] public string shreddableObjectTag;
     [SerializeField] private GameObject documentHolder;
+    AudioSource audioData;
     private GameObject objectHeld;
+
+    private void Start()
+    {
+        audioData = this.gameObject.GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -50,6 +57,7 @@ public class ShredderScript : MonoBehaviour
     {
         if (document.CompareTag(shreddableObjectTag) && document == objectHeld)
         {
+            audioData.Play(0);
             Destroy(document);
         }
         else
