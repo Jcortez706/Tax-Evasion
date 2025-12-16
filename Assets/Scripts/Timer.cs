@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -28,10 +26,6 @@ public class Timer : MonoBehaviour
     }
     public void DoQuitGame()
     {
-        Debug.Log("Quitting game...");
-        if (UnityEditor.EditorApplication.isPlaying == true) EditorApplication.isPlaying = false;
-        
-        else
-            Application.Quit();
+        SceneManager.LoadScene("End Scene");
     }
 }
