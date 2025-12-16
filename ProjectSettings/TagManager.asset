@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Moveable
+  - Shreddable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Shredder
   - Water
   - UI
   - Object
