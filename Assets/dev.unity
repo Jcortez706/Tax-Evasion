@@ -243,8 +243,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8309484899145214124, guid: 95b0275a1e2bbdf4782d380f63dfb782, type: 3}
   m_PrefabInstance: {fileID: 156260013}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!4 &237302037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7389273809458405375, guid: 6f7b9206e8634ed49be22ce24b106709, type: 3}
@@ -723,7 +721,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 563719251}
   m_SourcePrefab: {fileID: 100100000, guid: 76b310963c1ecf54b9340d4ffd7dde15, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &494194757
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,8 +847,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494194757}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &521696519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,7 +1135,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b235c805f008f6f4da469f7364846b10, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &634164777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1454,7 @@ Transform:
   m_GameObject: {fileID: 702817431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2209,7 +2203,7 @@ Transform:
   m_GameObject: {fileID: 1199765384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0.226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3071,7 +3065,7 @@ Transform:
   m_GameObject: {fileID: 1612630696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3357,10 +3351,11 @@ MonoBehaviour:
   pickupLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  shreddableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   objectGrabPointTransform: {fileID: 494194758}
   distance: 3
-<<<<<<< Updated upstream
-=======
   shredder: {fileID: 0}
 --- !u!4 &1948380838 stripped
 Transform:
@@ -3556,7 +3551,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5124417129142218896, guid: 2db51a3ce7d7fe34a934d68f0c488f54, type: 3}
   m_PrefabInstance: {fileID: 73234715}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &2089560484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,8 +3870,5 @@ SceneRoots:
   - {fileID: 943347571}
   - {fileID: 1195426102}
   - {fileID: 697950003}
-<<<<<<< Updated upstream
-=======
   - {fileID: 426825428}
   - {fileID: 857637252}
->>>>>>> Stashed changes
