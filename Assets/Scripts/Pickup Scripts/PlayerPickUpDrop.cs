@@ -55,7 +55,19 @@ public class PlayerPickUpDrop : MonoBehaviour
 
 
                     objectToDelete = raycastHit.transform.gameObject;
-                    
+
+                    Rigidbody deleteRigidBody =
+                        raycastHit.transform.GetComponentInParent<Rigidbody>();
+                    Debug.Log(deleteRigidBody);
+
+
+                    if (deleteRigidBody != null &&
+                        (deleteRigidBody.constraints & RigidbodyConstraints.FreezeAll) == RigidbodyConstraints.FreezeAll)
+                    {
+                        Debug.Log("Test HERE");
+                        deleteRigidBody.constraints = RigidbodyConstraints.None;
+                    }
+
                     this.objectGrabbable = objectGrabbable;
                     objectGrabbable.Grab(objectGrabPointTransform);
                     
