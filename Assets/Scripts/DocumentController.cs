@@ -5,6 +5,8 @@ public class DocumentController : MonoBehaviour
     [SerializeField] Transform documentController;
     public int GetChildCount()
     {
-        return documentController.childCount;
+        int  docs = documentController.childCount;
+        GameStats.Documents = docs;
+        return docs;
     }
 }
