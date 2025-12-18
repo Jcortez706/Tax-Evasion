@@ -32,13 +32,10 @@ public class PlayerMovement : MonoBehaviour
         cameraRight.y = 0;
         cameraRight.Normalize();
 
-        Vector3 movementVector = rawInputVector.z * cameraForward + rawInputVector.x * cameraRight;
-
-        // move player
+        Vector3 movementVector = rawInputVector.z * cameraForward + 
+            rawInputVector.x * cameraRight + new Vector3(0, -9.8f, 0);
+        
         controller.Move(movementVector * Time.deltaTime * playerSpeed);
 
-        // + gravity
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        
     }
 }
